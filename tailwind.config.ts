@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,25 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				f1: {
+					red: '#E10600',
+					black: '#15151E',
+					silver: '#F1F2F3',
+					darkgrey: '#38383F', 
+					lightgrey: '#8C8D96',
+				},
+				team: {
+					mercedes: '#00D2BE',
+					redbull: '#0600EF',
+					ferrari: '#DC0000',
+					mclaren: '#FF8700',
+					aston: '#006F62',
+					alpine: '#0090FF',
+					williams: '#005AFF',
+					haas: '#FFFFFF',
+					sauber: '#900000',
+					rb: '#0032FF'
 				}
 			},
 			borderRadius: {
@@ -70,25 +90,31 @@ export default {
 			},
 			keyframes: {
 				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' }
 				},
 				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
-					},
-					to: {
-						height: '0'
-					}
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' }
+				},
+				'flip': {
+					'0%': { transform: 'rotateY(0deg)' },
+					'100%': { transform: 'rotateY(180deg)' }
+				},
+				'flip-back': {
+					'0%': { transform: 'rotateY(180deg)' },
+					'100%': { transform: 'rotateY(0deg)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'flip': 'flip 0.5s ease-out forwards',
+				'flip-back': 'flip-back 0.5s ease-out forwards'
+			},
+			fontFamily: {
+				'bungee': ['Bungee', 'sans-serif'],
+				'roboto': ['Roboto', 'sans-serif']
 			}
 		}
 	},
